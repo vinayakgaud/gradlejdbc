@@ -27,11 +27,11 @@ public class FetchingData {
 					Blob blob = rs.getBlob(3);
 					String updateNameString = name.replaceAll(" ", "");
 					byte[] bArr = blob.getBytes(1, (int)blob.length());
-					FileOutputStream fos = new FileOutputStream("G:\\JAVA_Projects\\Full Stack Projects\\gradlejdbc\\gradlejdbc\\lib\\src\\main\\resources\\images\\"+updateNameString+"#"+id+".png");
+					FileOutputStream fos = new FileOutputStream("(pathForStorage)"+updateNameString+"#"+id+".png");
 					fos.write(bArr);
 					fos.close();
 					System.out.println("Picture: "+updateNameString+"#"+id+".png");
-					System.out.println("Saved the image in images folder under resources,\nPath: G:\\JAVA_Projects\\Full Stack Projects\\gradlejdbc\\gradlejdbc\\lib\\src\\main\\resources\\images\\");
+					System.out.println("Saved the image in images folder under resources,\nPath: (pathForStorage)");
 				}
 				statement.close();
 				rs.close();
