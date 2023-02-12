@@ -8,9 +8,9 @@ public class CreateConnection {
 
 	public static DataSource createDataSource() {
 		HikariDataSource ds = new HikariDataSource();
-		ds.setJdbcUrl("jdbc:mysql://localhost:3306/gradlejdbc");
-		ds.setUsername("root");
-		ds.setPassword("root");
+		ds.setJdbcUrl("jdbc:mysql://localhost:3306/gradlejdbc"); //url for the database instead of gradlejdbc update the databaseName we are working on
+		ds.setUsername("root"); //username for mysql
+		ds.setPassword("root"); //password for mysql
 		return ds;
 	}
 
